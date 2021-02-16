@@ -15,12 +15,11 @@ int main(){
     std::cout << "m-shell-0.1$ ";
     getline(cin, response);
 
+
     //exits once user input equals 'QUIT'
     if(quit.compare(response) == 0){
       std::cout << "Exiting..." << endl;
       return 0;
     }
-
   }
-
 }
