@@ -7,14 +7,15 @@ using namespace std;
 int main(){
 
   //original message to display
-  std::cout << "Enter QUIT to exit" << endl;
+  std::cout << "Enter quit to exit" << endl;
   //infinite loop
   while(1){
 
     string response;
-    string quit = "QUIT";
+    string quit = "quit";
     std::cout << "m-shell-0.1$ ";
     getline(cin, response);
+    transform(response.begin(), response.end(), response.begin(), ::tolower); //converts response to lowercase
 
     //exits once user input equals 'QUIT'
     if(quit.compare(response) == 0){
